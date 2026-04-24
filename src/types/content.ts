@@ -3,6 +3,7 @@ export interface SiteConfig {
   tagline: string;
   bio: string;
   email: string;
+  resumeUrl?: string;
   socials: { label: string; href: string; icon: string }[];
 }
 
@@ -14,6 +15,16 @@ export interface ResearchProject {
   codeUrl?: string;
   year: number;
   status: "published" | "preprint" | "in-progress" | "unpublished";
+}
+
+export interface Project {
+  title: string;
+  description: string;
+  tags: string[];
+  paperUrl?: string;
+  paperCitation?: string;
+  codeUrl?: string;
+  year: number;
 }
 
 export interface WorkItem {

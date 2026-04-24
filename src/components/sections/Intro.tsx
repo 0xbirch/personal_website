@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { siteConfig } from "@/data/site";
-import { Mail } from "lucide-react";
+import { FileDown, Mail } from "lucide-react";
 
 export function Intro() {
   return (
@@ -26,6 +26,17 @@ export function Intro() {
               <Mail size={16} />
               Get in touch
             </a>
+            {siteConfig.resumeUrl && (
+              <a
+                href={siteConfig.resumeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg border border-border px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-foreground/5"
+              >
+                <FileDown size={16} />
+                Resume
+              </a>
+            )}
             {siteConfig.socials.map((social) => (
               <a
                 key={social.label}

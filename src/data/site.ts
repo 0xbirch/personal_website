@@ -3,8 +3,9 @@ import type { SiteConfig } from "@/types/content";
 export const siteConfig: SiteConfig = {
   name: "Steve Duval",
   tagline: "Software Engineer & ML Engineer",
-  bio: "Experienced software engineer at Liberty Mutual and developing machine learning engineer at Georgia Institute of Technology. Passionate about bridging the gap between research and production, with experience across the full stack.",
+  bio: "Principal Software Engineer and tech lead with 9 years of experience building reliable, high-performance systems. Over 7 years guiding architectural design, observability, and system performance across agile teams. Passionate about bridging the gap between machine learning research and production — currently pursuing an M.S. in Computer Science (ML) at Georgia Tech with a 4.0 GPA.",
   email: "sduval8@gatech.edu",
+  resumeUrl: "/resume.pdf",
   socials: [
     {
       label: "LinkedIn",

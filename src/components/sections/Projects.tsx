@@ -1,16 +1,16 @@
-import { researchProjects } from "@/data/research";
+import { projects } from "@/data/projects";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { Tag } from "@/components/ui/Tag";
+import { ExternalLink } from "@/components/ui/ExternalLink";
 
-export function Research() {
+export function Projects() {
   return (
-    <SectionWrapper id="research">
+    <SectionWrapper id="projects">
       <h2 className="text-2xl font-bold tracking-tight text-foreground">
-        Research
+        Projects
       </h2>
       <div className="mt-8 space-y-8">
-        {researchProjects.map((project) => {
-          const href = project.paperUrl ?? project.codeUrl;
+        {projects.map((project) => {
           const baseClass =
             "rounded-xl border border-border bg-card p-6";
           const inner = (
@@ -19,18 +19,11 @@ export function Research() {
                 <h3 className="font-semibold text-foreground">
                   {project.title}
                 </h3>
-                <div className="flex shrink-0 items-center gap-2">
-                  {project.status === "unpublished" && (
-                    <span className="rounded-full bg-foreground/5 px-2.5 py-0.5 text-xs font-medium text-muted">
-                      Unpublished
-                    </span>
-                  )}
-                  <span className="rounded-full bg-foreground/5 px-2.5 py-0.5 text-xs font-medium text-muted">
-                    {project.year}
-                  </span>
-                </div>
+                <span className="shrink-0 rounded-full bg-foreground/5 px-2.5 py-0.5 text-xs font-medium text-muted">
+                  {project.year}
+                </span>
               </div>
-              <p className="mt-2 whitespace-pre-line text-sm leading-relaxed text-muted">
+              <p className="mt-2 text-sm leading-relaxed text-muted">
                 {project.description}
               </p>
               <div className="mt-4 flex flex-wrap gap-2">
@@ -38,9 +31,17 @@ export function Research() {
                   <Tag key={tag}>{tag}</Tag>
                 ))}
               </div>
+              {project.paperUrl && (
+                <div className="mt-4 flex gap-4 text-sm">
+                  <ExternalLink href={project.paperUrl}>
+                    {project.paperCitation ?? "View Paper"}
+                  </ExternalLink>
+                </div>
+              )}
             </>
           );
 
+          const href = project.codeUrl ?? project.paperUrl;
           return href ? (
             <a
               key={project.title}
