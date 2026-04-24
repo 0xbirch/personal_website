@@ -4,8 +4,8 @@ export const researchProjects: ResearchProject[] = [
   {
     title: "Effects of LLM Use on Critical Thinking and High-Level Cognitive Functions",
     description:
-      "A systematic literature review examining the long-term effects of LLM usage on critical thinking and its underlying cognitive components — executive functions and metacognition — and how these effects vary across different LLM usage types.",
-    tags: ["Literature Review", "LLM", "Critical Thinking", "Cognitive Science", "AI & Society"],
+      "An IEEE-formatted systematic literature review examining the long-term effects of LLM usage on critical thinking and its underlying cognitive components — executive functions and metacognition — and how these effects vary across different LLM usage types.",
+    tags: ["IEEE", "Literature Review", "LLM", "Critical Thinking", "Cognitive Science", "AI & Society"],
     paperUrl: "/assets/llm-critical-thinking-review.pdf",
     year: 2026,
     status: "unpublished",
